@@ -103,10 +103,10 @@ class TicTacToeFacade {
         if (this.board.placeMark(this.logic.currentPlayer, row, col)) {
             // After a successful move, check the game status
             if (this.logic.checkWinner(this.board.board)) {
-                console.log(`\n🎉 Congratulations! Player '${this.logic.winner}' wins! 🎉`);
+                console.log(`\n Congratulations! Player '${this.logic.winner}' wins! `);
             } else if (this.board.isFull()) {
                 this.logic.gameOver = true;
-                console.log("\n🤝 It's a draw! Good game. 🤝");
+                console.log("\n It's a draw! Good game. ");
             } else {
                 this.logic.switchPlayer();
             }
@@ -184,13 +184,13 @@ try {
             const [row, col] = input.split(',').map(num => parseInt(num.trim(), 10));
 
             if (isNaN(row) || isNaN(col) || row < 0 || row > 2 || col < 0 || col > 2) {
-                console.log("❌ Invalid input. Please use the format 'row,col' (e.g., '1,2').");
+                console.log(" Invalid input. Please use the format 'row,col' (e.g., '1,2').");
                 playTurn();
                 return;
             }
 
             if (!game.makeMove(row, col)) {
-                console.log("❌ That spot is already taken! Try another one.");
+                console.log(" That spot is already taken! Try another one.");
             }
             
             playTurn();
@@ -206,3 +206,4 @@ try {
     const demoGame = new TicTacToeFacade();
     runDemoGame(demoGame);
 }
+
