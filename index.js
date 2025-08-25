@@ -1,5 +1,5 @@
 // --- Game State ---
-// This object holds all the data for our game.
+
 let gameState = {
     board: [
         [' ', ' ', ' '],
@@ -176,3 +176,4 @@ try {
     console.log("This script requires a Node.js terminal to be run interactively.");
     runDemoGame();
 }
+
