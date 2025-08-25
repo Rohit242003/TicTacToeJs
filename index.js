@@ -136,9 +136,7 @@ class TicTacToeFacade {
     }
 }
 
-/**
- * Runs a non-interactive demo game using the facade.
- */
+
 function runDemoGame(game) {
     console.log("\n--- Running a Non-Interactive Demo ---");
     const moves = [[0,0], [1,1], [0,1], [1,0], [0,2]];
@@ -154,7 +152,7 @@ function runDemoGame(game) {
 
 
 // --- Main Execution ---
-// We'll try to run the interactive version, but fall back to a demo if it fails.
+
 try {
     const readline = require('readline');
     const rl = readline.createInterface({
@@ -162,7 +160,7 @@ try {
         output: process.stdout
     });
 
-    const game = new TicTacToeFacade(); // Create the game using our simple facade
+    const game = new TicTacToeFacade(); 
 
     function playTurn() {
         if (game.isGameOver()) {
@@ -206,4 +204,5 @@ try {
     const demoGame = new TicTacToeFacade();
     runDemoGame(demoGame);
 }
+
 
